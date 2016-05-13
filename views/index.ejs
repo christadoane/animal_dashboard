@@ -1,0 +1,33 @@
+<html>
+<head>
+<title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+        
+</script>
+</head>
+<body>
+<h1>Check out all of our dogs!</h1>
+
+        <% for (var x in dogs) { %>
+            <a href="dogs/<%= dogs[x]._id%>"><%= dogs[x].name %></a><p>Color: <%= dogs[x].color %> </p>
+
+            <form action="/dogs/<%= dogs[x]._id%>/destroy" method = "post" = >
+            <input type="submit" value="Delete"></form>
+
+            <hr>
+        
+        
+        
+        <% } %>
+        
+        
+            <button><a href="/dogs/new">Add A Dog</a></button>
+    
+
+</div>
+</body>
+</html>

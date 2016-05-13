@@ -1,0 +1,30 @@
+<html>
+<head>
+<title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+        
+</script>
+</head>
+<body>
+<h1>Editing <%= dog.name %></h1>
+<div>
+	<form action="/dogs/<%= dog._id %>" method = "post" = >
+	
+
+<div>
+	<label>Dog name:</label>
+	<input type="text" name="name" id="name" value='<%= dog.name %>'>
+</div>
+<div>
+	<label>Dog color:</label>
+	<input type="text" name="color" id="color" value='<%= dog.color %>'>
+</div>
+<div>
+	<input type="submit" value="Update">
+</div>
+</form>
+<button><a href="/">Home</button>
+</div>
+</body>
